@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:49:30 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 20:19:57 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void					print_both_stack(t_stack *a, t_stack *b);
 int						get_largest_width(t_stack *stack);
 void					print_n_spaces(int n);
 void					print_init(t_stack *a);
+int						is_sorted(t_stack *stack);
 
 // push swap functions here
 t_stack					*generate_stack_a();
