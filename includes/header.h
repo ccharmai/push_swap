@@ -2,6 +2,7 @@
 # define HEADER_H
 
 # include "../ft_printf/includes/printf.h"
+# include "../stack/stack.h"
 
 // structures here
 
