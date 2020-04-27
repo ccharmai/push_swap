@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/04/27 16:49:54 by ccharmai          #+#    #+#             */
+/*   Updated: 2020/04/27 16:50:10 by ccharmai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "stack.h"
 
 t_stack	*create_head(int element)
@@ -40,7 +52,7 @@ t_stack	*init_stack_with_mass(int len, int *mass)
 		append_element(mass[i], tmp_head);
 		i++;
 	}
-	head = tmp_head -> next;
+	head = tmp_head->next;
 	free(tmp_head);
 	return (head);
 }
