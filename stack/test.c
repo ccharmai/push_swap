@@ -6,11 +6,11 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:50:20 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 17:59:01 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 18:11:04 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "../includes/header.h"
 
 void	test_stack(void)
 {

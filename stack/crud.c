@@ -6,11 +6,11 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:17:07 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 17:53:16 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 18:11:20 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "../includes/header.h"
 
 int		delete_head(t_stack **head)
 {
