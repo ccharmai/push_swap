@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:20:37 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:21:55 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 19:58:16 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	raise_not_integer_error()
 {
-	ft_printf("ERROR!\n");
+	ft_printf("Error\n");
 	exit(1);
 }
