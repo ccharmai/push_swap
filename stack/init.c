@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:49:54 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 16:50:10 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 17:11:06 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_stack	*create_head(int element)
 	if (!head)
 		raise_memory_error();
 	head->element = element;
+	head->next = NULL;
 	return (head);
 }
 

@@ -6,14 +6,13 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 14:50:10 by aleksandrko       #+#    #+#             */
-/*   Updated: 2020/04/24 14:03:10 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 17:25:04 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
 
-# include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdlib.h>
