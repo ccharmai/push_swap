@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:33 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 18:41:52 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 19:08:27 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,17 @@ int	main()
 	t_stack *b = init_stack_with_mass(3, mass_b);
 
 	push(&a, &b);
+	push(&a, &b);
+	swap(a);
+
+	rotate(&a);
+	rotate(&b);
 
 	print_stack(a);
+	print_stack(b);
+
+	reverse_rotate(&b);
+
 	print_stack(b);
 
 	free_stack(a);

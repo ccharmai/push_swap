@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 18:40:07 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 19:08:09 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void					raise_out_of_stack_error();
 t_stack					*generate_stack_a();
 void					swap(t_stack *stack);
 void					push(t_stack **rem_head, t_stack **get_head);
+void					rotate(t_stack **stack);
+void					reverse_rotate(t_stack **stack);
 
 // stack functions here
 t_stack					*create_head(int element);
