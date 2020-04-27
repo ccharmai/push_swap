@@ -17,4 +17,4 @@ test:
 	@./prog
 
 grind: all
-	@valgrind --leack-check=full ./prog
+	@valgrind --leak-check=full ./prog
