@@ -1,25 +1,25 @@
 #include "stack.h"
 
-s_stack	*create_head(int element)
+t_stack	*create_head(int element)
 {
-	s_stack	*head;
+	t_stack	*head;
 
-	head = (s_stack*)malloc(sizeof(s_stack));
+	head = (t_stack*)malloc(sizeof(t_stack));
 	if (!head)
 		raise_memory_error();
 	head->element = element;
 	return (head);
 }
 
-void	append_element(int element, s_stack *stack)
+void	append_element(int element, t_stack *stack)
 {
-	s_stack	*p;
-	s_stack	*tmp;
+	t_stack	*p;
+	t_stack	*tmp;
 
 	p = stack;
 	while (p->next)
 		p = p->next;
-	tmp = (s_stack*)malloc(sizeof(s_stack));
+	tmp = (t_stack*)malloc(sizeof(t_stack));
 	if (!tmp)
 		raise_memory_error();
 	tmp->element = element;
@@ -27,10 +27,10 @@ void	append_element(int element, s_stack *stack)
 	p->next = tmp;
 }
 
-s_stack	*init_stack_with_mass(int len, int *mass)
+t_stack	*init_stack_with_mass(int len, int *mass)
 {
-	s_stack	*head;
-	s_stack *tmp_head;
+	t_stack	*head;
+	t_stack *tmp_head;
 	int		i;
 
 	i = 0;
@@ -45,7 +45,7 @@ s_stack	*init_stack_with_mass(int len, int *mass)
 	return (head);
 }
 
-void	print_stack(s_stack *stack)
+void	print_stack(t_stack *stack)
 {
 	while (stack)
 	{
