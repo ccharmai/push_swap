@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:17:07 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 18:11:20 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 18:38:46 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,16 @@ int		delete_last(t_stack *stack)
 	n = p->element;
 	free(p);
 	return (n);
+}
+
+void	append_head(t_stack **stack, int element)
+{
+	t_stack	*tmp;
+
+	tmp = (t_stack *)malloc(sizeof(t_stack));
+	if (!tmp)
+		raise_memory_error();
+	tmp->element = element;
+	tmp->next = *stack;
+	*stack = tmp;
 }

@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:49:03 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 18:11:12 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 18:34:00 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,11 @@ int		stack_len(t_stack *stack)
 		len++;
 	}
 	return (len);
+}
+
+int		have_two(t_stack *stack)
+{
+	if (stack && stack->next)
+		return (1);
+	return (0);
 }

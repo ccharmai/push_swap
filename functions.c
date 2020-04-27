@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   functions.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 17:11:33 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 18:41:52 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/04/27 18:22:46 by ccharmai          #+#    #+#             */
+/*   Updated: 2020/04/27 18:39:57 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/header.h"
 
-int	main()
+void	swap(t_stack *stack)
 {
-	// test_stack();
-	// t_stack	*a;
-	// // t_stack	*b;
+	int	tmp;
 
-	// a = generate_stack_a();
-	// ft_printf("stack a:\n");
-	// print_stack(a);
+	if (!have_two(stack))
+		return ;
+	tmp = stack->element;
+	stack->element = (stack->next)->element;
+	(stack->next)->element = tmp;
+}
 
-	int mass_a[] = {1, 2, 3};
-	t_stack *a = init_stack_with_mass(3, mass_a);
-
-	int mass_b[] = {4, 5, 6};
-	t_stack *b = init_stack_with_mass(3, mass_b);
-
-	push(&a, &b);
-
-	print_stack(a);
-	print_stack(b);
-
-	free_stack(a);
-	free_stack(b);
-	return 0;
+void	push(t_stack **rem_head, t_stack **get_head)
+{
+	if (!get_head)
+		return ;
+	append_head(get_head, delete_element(rem_head, 0));
 }

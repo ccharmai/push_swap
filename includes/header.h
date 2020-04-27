@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 18:10:46 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 18:40:07 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void					raise_out_of_stack_error();
 
 // push swap functions here
 t_stack					*generate_stack_a();
+void					swap(t_stack *stack);
+void					push(t_stack **rem_head, t_stack **get_head);
 
 // stack functions here
 t_stack					*create_head(int element);
@@ -37,6 +39,8 @@ int						delete_element(t_stack **stack, int i);
 int						delete_head(t_stack **head);
 int						delete_last(t_stack *stack);
 void					append_element(int element, t_stack *stack);
+void					append_head(t_stack **stack, int element);
 int						stack_len(t_stack *stack);
+int						have_two(t_stack *stack);
 
 #endif
