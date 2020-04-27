@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:50:20 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 17:25:33 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 17:43:52 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,22 @@ void	test_stack(void)
 	int len_mass = 10;
 	t_stack	*stack_from_mass = init_stack_with_mass(len_mass,  mass);
 
-	ft_printf("print stack from mass\n");
+	ft_printf("create stack\n");
 	print_stack(stack_from_mass);
 
-	int n = delete_element(stack_from_mass, 32423);
+	int n = delete_element(&stack_from_mass, 0);
+	print_stack(stack_from_mass);
+	ft_printf("was deleted %i\n", n);
+
+	n = delete_element(&stack_from_mass, 1);
+	print_stack(stack_from_mass);
+	ft_printf("was deleted %i\n", n);
+
+	n = delete_element(&stack_from_mass, 100);
+	print_stack(stack_from_mass);
+	ft_printf("was deleted %i\n", n);
+
+	n = delete_element(&stack_from_mass, 100);
 	print_stack(stack_from_mass);
 	ft_printf("was deleted %i\n", n);
 

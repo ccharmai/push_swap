@@ -6,21 +6,35 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:17:07 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 17:26:27 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 17:42:20 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-int	delete_element(t_stack *stack, int number)
+int		delete_head(t_stack **head)
+{
+	int		n;
+	t_stack	*tmp;
+
+	tmp = *head;
+	*head = (*head)->next;
+	n = tmp->element;
+	free(tmp);
+	return (n);
+}
+
+int		delete_element(t_stack **stack, int number)
 {
 	int		i;
 	int		n;
 	t_stack	*p;
 	t_stack	*prev;
 
+	if (number == 0)
+		return (delete_head(&(*stack)));
 	i = 0;
-	p = stack;
+	p = *stack;
 	prev = NULL;
 	while (p->next && i < number)
 	{

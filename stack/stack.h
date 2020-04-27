@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:45:03 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 17:12:41 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 17:45:16 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void					test_stack();
 void					free_stack(t_stack *stack);
 t_stack					*init_stack_with_mass(int len, int *mass);
 void					print_stack(t_stack *stack);
-int						delete_element(t_stack *stack, int i);
+int						delete_element(t_stack **stack, int i);
+int						delete_head(t_stack **head);
 
 #endif
