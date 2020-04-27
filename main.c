@@ -2,6 +2,7 @@
 
 int	main()
 {
-	ft_printf("start project - push_swap\n");
+	ft_printf("init\n");
+	test_stack();
 	return 0;
 }
