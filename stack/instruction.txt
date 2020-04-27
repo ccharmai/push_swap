@@ -1,5 +1,5 @@
 Создать голову стека со значением 5
-	t_stack *head = create_head(5)
+	t_stack *head = create_head(5);
 
 Высвободить память, выделененную под стек:
 	free_stack(stack);
@@ -13,6 +13,12 @@
 	print_stack(stack);
 
 Удалить элемент под номером i из стека, при этом получив его значение:
-	int k = delete_element(&stack, i)
+	int k = delete_element(&stack, i);
 	Если i не будет выходить за пределы стека, то удалится последний элемент
 	Аналогично можно удалить и первый элемент без изменения головы
+
+Добавить элемент в конец списка:
+	append_element(int element, t_stack *stack);
+
+Получить количество элементов в стеке
+	int len = stack_len(stack);

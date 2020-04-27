@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:17:07 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 17:42:20 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 17:53:16 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,25 @@ int		delete_element(t_stack **stack, int number)
 		i++;
 	}
 	prev->next = p->next;
+	n = p->element;
+	free(p);
+	return (n);
+}
+
+int		delete_last(t_stack *stack)
+{
+	int		n;
+	t_stack	*prev;
+	t_stack	*p;
+
+	p = stack;
+	prev = NULL;
+	while (p->next)
+	{
+		prev = p;
+		p = p->next;
+	}
+	prev->next = NULL;
 	n = p->element;
 	free(p);
 	return (n);
