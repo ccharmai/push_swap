@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 20:19:57 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 21:31:46 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ typedef struct			s_stack
 	struct s_stack		*next;
 }						t_stack;
 
-// libs functions here
+/*
+*	libs functions here
+*/
 void					raise_not_integer_error();
 int						is_integer(char *line);
 void					print_both_stack(t_stack *a, t_stack *b);
@@ -30,14 +32,13 @@ void					print_n_spaces(int n);
 void					print_init(t_stack *a);
 int						is_sorted(t_stack *stack);
 
-// push swap functions here
-t_stack					*generate_stack_a();
+/* push swap functions here */
 void					swap(t_stack *stack);
 void					push(t_stack **rem_head, t_stack **get_head);
 void					rotate(t_stack **stack);
 void					reverse_rotate(t_stack **stack);
 
-// stack functions here
+/* stack functions here */
 t_stack					*create_head(int element);
 void					test_stack();
 void					free_stack(t_stack *stack);
@@ -51,5 +52,9 @@ void					append_element(int element, t_stack *stack);
 void					append_head(t_stack **stack, int element);
 int						stack_len(t_stack *stack);
 int						have_two(t_stack *stack);
+
+/* solve */
+void					switcher(t_stack *a);
+void					solve_3(t_stack *a);
 
 #endif

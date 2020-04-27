@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:28:58 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:44:50 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 21:35:07 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,10 @@ void	print_both_stack(t_stack *a, t_stack *b)
 		}
 		if (b)
 		{
-			ft_printf(" %i\n", b->element);
+			ft_printf(" %i", b->element);
 			b = b->next;
 		}
+		ft_printf("\n");
 	}
 	ft_printf("_");
 	print_n_spaces(width_max);

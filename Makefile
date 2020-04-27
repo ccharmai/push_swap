@@ -3,7 +3,7 @@ lib:
 	@cd ./ft_printf && make clean
 
 all: lib
-	@gcc *.c /libs/*.c /stack/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
+	@gcc *.c ./libs/*.c ./stack/*.c ./solve/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
 
 clean:
 	@cd ./ft_printf && make clean
@@ -13,9 +13,9 @@ fclean:
 	@cd ./ft_printf && make fclean
 
 test:
-	@gcc *.c ./libs/*.c ./stack/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
-	@./prog 2 6 3 6 4 2 6 156
+	@gcc *.c ./libs/*.c ./stack/*.c ./solve/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
+	@./prog 3 1 2
 
 grind:
-	@gcc -g *.c ./libs/*.c ./stack/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
+	@gcc -g *.c ./libs/*.c ./stack/*.c ./solve/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
 	@valgrind --leak-check=full ./prog 43 23 56 87 34
