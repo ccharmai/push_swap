@@ -30,16 +30,19 @@ void	append_element(int element, s_stack *stack)
 s_stack	*init_stack_with_mass(int len, int *mass)
 {
 	s_stack	*head;
+	s_stack *tmp_head;
 	int		i;
 
 	i = 0;
-	head = create_head(0);
+	tmp_head = create_head(0);
 	while (i < len)
 	{
-		append_element(mass[i], head);
+		append_element(mass[i], tmp_head);
 		i++;
 	}
-	return (head->next);
+	head = tmp_head -> next;
+	free(tmp_head);
+	return (head);
 }
 
 void	print_stack(s_stack *stack)
