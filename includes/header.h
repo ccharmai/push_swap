@@ -7,7 +7,6 @@
 // structures here
 
 // libs functions here
-void	append_symb(char **line, char symb);
 
 // push swap functions here
 
