@@ -5,8 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 17:13:59 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 17:16:50 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/04/27 19:20:37 by ccharmai          #+#    #+#             */
+/*   Updated: 2020/04/27 19:21:55 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/header.h"
+
+void	raise_not_integer_error()
+{
+	ft_printf("ERROR!\n");
+	exit(1);
+}

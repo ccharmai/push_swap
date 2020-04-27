@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_integer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 17:11:33 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:49:41 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/04/27 19:17:20 by ccharmai          #+#    #+#             */
+/*   Updated: 2020/04/27 19:19:33 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/header.h"
+#include "../includes/header.h"
 
-int	main(int ac, char **av)
+int		is_integer(char *line)
 {
-	t_stack *a;
-	// t_stack	*b;
+	int i;
 
-	a = init_stack_with_char_mass(ac, av);
-	// b = init_stack_with_char_mass(ac, av);
-
-	// print_stack_stolb(a);
-
-	print_init(a);
-	
-	// print_both_stack(a, b);
-
-	free_stack(a);
-	// free_stack(b);
-
-	return 0;
+	i = 0;
+	if (line[i] == '-')
+		i++;
+	while (line[i] != '\0')
+	{
+		if (line[i] < '0' || line[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
 }

@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 17:11:33 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:49:41 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/04/27 19:45:49 by ccharmai          #+#    #+#             */
+/*   Updated: 2020/04/27 19:55:36 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/header.h"
+#include "../includes/header.h"
 
-int	main(int ac, char **av)
+void	print_init(t_stack *a)
 {
-	t_stack *a;
-	// t_stack	*b;
+	int		w;
+	t_stack	*p;
 
-	a = init_stack_with_char_mass(ac, av);
-	// b = init_stack_with_char_mass(ac, av);
-
-	// print_stack_stolb(a);
-
-	print_init(a);
-	
-	// print_both_stack(a, b);
-
-	free_stack(a);
-	// free_stack(b);
-
-	return 0;
+	p = a;
+	ft_printf("Init a and b:\n");
+	while (p)
+	{
+		ft_printf("%i\n", p->element);
+		p = p->next;
+	}
+	w = get_largest_width(a);
+	ft_printf("_");
+	print_n_spaces(w);
+	ft_printf("_\n");
+	ft_printf("a");
+	print_n_spaces(w);
+	ft_printf("b\n");
 }

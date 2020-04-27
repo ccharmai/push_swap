@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:49:54 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 18:11:17 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 19:25:40 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,22 @@ t_stack	*init_stack_with_mass(int len, int *mass)
 	head = tmp_head->next;
 	free(tmp_head);
 	return (head);
+}
+
+t_stack	*init_stack_with_char_mass(int len, char **av)
+{
+	int i;
+	int tab[len];
+
+	i = 1;
+	while (i < len)
+	{
+		if (!is_integer(av[i]))
+			raise_not_integer_error();
+		tab[i - 1] = ft_atoi(av[i]);
+		i++;
+	}
+	return (init_stack_with_mass(len - 1, tab));
 }
 
 void	print_stack(t_stack *stack)

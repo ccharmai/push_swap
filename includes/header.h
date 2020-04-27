@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:08:09 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/27 19:49:30 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,12 @@ typedef struct			s_stack
 }						t_stack;
 
 // libs functions here
-void					raise_out_of_stack_error();
+void					raise_not_integer_error();
+int						is_integer(char *line);
+void					print_both_stack(t_stack *a, t_stack *b);
+int						get_largest_width(t_stack *stack);
+void					print_n_spaces(int n);
+void					print_init(t_stack *a);
 
 // push swap functions here
 t_stack					*generate_stack_a();
@@ -36,6 +41,7 @@ t_stack					*create_head(int element);
 void					test_stack();
 void					free_stack(t_stack *stack);
 t_stack					*init_stack_with_mass(int len, int *mass);
+t_stack					*init_stack_with_char_mass(int len, char **av);
 void					print_stack(t_stack *stack);
 int						delete_element(t_stack **stack, int i);
 int						delete_head(t_stack **head);
