@@ -16,5 +16,6 @@ test:
 	@gcc *.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
 	@./prog
 
-grind: all
+grind:
+	@gcc -g *.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
 	@valgrind --leak-check=full ./prog
