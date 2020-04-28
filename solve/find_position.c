@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 20:41:10 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/28 22:04:40 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/28 22:40:08 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,13 @@ int	find_min_element(t_stack *stack)
 		i++;
 	}
 	return (min);
+}
+
+t_pos	*get_position_info(t_stack *stack)
+{
+	t_pos *info;
+
+	info->min_position = 0;
+	info->max_position = 0;
+	
 }
