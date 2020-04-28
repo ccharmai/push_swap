@@ -14,8 +14,8 @@ fclean:
 
 test:
 	@gcc *.c ./libs/*.c ./stack/*.c ./solve/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
-	@./prog 3 1 2
+	@./prog 6 3 5 4 1 7 2
 
 grind:
 	@gcc -g *.c ./libs/*.c ./stack/*.c ./solve/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
-	@valgrind --leak-check=full ./prog 43 23 56 87 34
+	@valgrind --leak-check=full ./prog 6 3 5 4 1 7 2

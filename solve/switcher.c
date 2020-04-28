@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 21:07:10 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/28 20:44:14 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/28 21:34:41 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	switcher(t_stack *a)
 		solve_3(a);
 	else if (len == 4)
 		solve_4(a);
-	else if (len == 5)
-		ft_printf("len = 5\n");
+	else if (len >= 6 && len <= 20)
+		solve_6_20(a);
 }

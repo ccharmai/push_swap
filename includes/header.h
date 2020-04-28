@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/28 20:49:06 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/28 22:04:49 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ void					append_head(t_stack **stack, int element);
 int						stack_len(t_stack *stack);
 int						have_two(t_stack *stack);
 int						find_min_position(t_stack *stack);
+int						find_max_position(t_stack *stack);
+int						find_min_element(t_stack *stack);
 
 /* solve */
 void					switcher(t_stack *a);
@@ -60,6 +62,6 @@ void					solve_1(t_stack *a);
 void					solve_2(t_stack *a);
 void					solve_3(t_stack *a);
 void					solve_4(t_stack *a);
-void					solve_5(t_stack *a);
+void					solve_6_20(t_stack *a);
 
 #endif
