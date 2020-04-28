@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 21:26:45 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 22:04:28 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/28 20:47:19 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,54 +23,41 @@ void	solve_3(t_stack *a)
 	second = a->next->element;
 	third = a->next->next->element;
 	b = NULL;
-
 	if (is_sorted(a))
 	{
 		ft_printf("Exec:\n");
 		print_both_stack(a, b);
 	}
-
-	else if (second < first && first < third)
+	else if (first > second && second < third && first < third)
 	{
 		ft_printf("Exec: sa\n");
 		swap(a);
 		print_both_stack(a, b);
 	}
-
-	else if (third < second && second < third)
+	else if (first > second && second > third && third < first)
 	{
 		ft_printf("Exec: sa rra\n");
 		swap(a);
 		reverse_rotate(&a);
 		print_both_stack(a, b);
 	}
-
-	else if (second < third && third < first)
+	else if (first > second && second < third && third < first)
 	{
 		ft_printf("Exec: ra\n");
 		rotate(&a);
 		print_both_stack(a, b);
 	}
-
-	else if (first < third && third < second)
+	else if (first < second && third < second &&  third > first)
 	{
 		ft_printf("Exec: sa ra\n");
 		swap(a);
 		rotate(&a);
 		print_both_stack(a, b);
 	}
-
-	else if (third < first && first < second)
+	else if (first < second && second > third && third < first)
 	{
 		ft_printf("Exec: ra\n");
 		reverse_rotate(&a);
-		print_both_stack(a, b);
-	}
-
-	else if (second < first)
-	{
-		ft_printf("Exec: sa\n");
-		swap(a);
 		print_both_stack(a, b);
 	}
 }
