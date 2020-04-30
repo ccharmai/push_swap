@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/28 22:37:53 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 16:04:26 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,12 @@ typedef struct			s_stack
 typedef struct			s_pos
 {
 	int					min_position;
-	int					max_position;
+	int					min_element;
 	int					max_position;
 	int					max_element;
 }						t_pos;
 
-/*
-*	libs functions here
+/*	libs functions here
 */
 void					raise_not_integer_error();
 int						is_integer(char *line);
@@ -39,6 +38,7 @@ int						get_largest_width(t_stack *stack);
 void					print_n_spaces(int n);
 void					print_init(t_stack *a);
 int						is_sorted(t_stack *stack);
+void					print_answer(t_stack *a);
 
 /* push swap functions here */
 void					swap(t_stack *stack);
@@ -48,7 +48,6 @@ void					reverse_rotate(t_stack **stack);
 
 /* stack functions here */
 t_stack					*create_head(int element);
-void					test_stack();
 void					free_stack(t_stack *stack);
 t_stack					*init_stack_with_mass(int len, int *mass);
 t_stack					*init_stack_with_char_mass(int len, char **av);
@@ -60,18 +59,15 @@ void					append_element(int element, t_stack *stack);
 void					append_head(t_stack **stack, int element);
 int						stack_len(t_stack *stack);
 int						have_two(t_stack *stack);
-int						find_min_position(t_stack *stack);
-int						find_max_position(t_stack *stack);
-int						find_min_element(t_stack *stack);
+t_pos					get_position_info(t_stack *stack);
 
 /* solve */
 void					move_2_b(t_stack **a, t_stack **b);
 void					switcher(t_stack *a);
-void					solve_1(t_stack *a);
-void					solve_2(t_stack *a);
-void					solve_3(t_stack *a);
-void					solve_4(t_stack *a);
-void					solve_6_20(t_stack *a);
-void					solve_21_101(t_stack *a);
+void					solve_2(t_stack **a);
+void					solve_3(t_stack **a);
+void					solve_4(t_stack **a);
+void					solve_6_20(t_stack **a);
+void					solve_21_101(t_stack **a);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:20:37 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:58:16 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 16:02:29 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/header.h"
 
-void	raise_not_integer_error()
+void	raise_not_integer_error(void)
 {
 	ft_printf("Error\n");
 	exit(1);

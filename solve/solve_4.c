@@ -6,11 +6,13 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 20:40:58 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/28 20:48:01 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 16:01:32 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/header.h"
 
-void	solve_4(t_stack *a)
-{}
+void	solve_4(t_stack **a)
+{
+	return ;
+}

@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 21:18:30 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/28 22:18:16 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 16:00:27 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,54 +20,46 @@ void	move_2_b(t_stack **a, t_stack **b)
 
 void	mover(t_stack **a, t_stack **b)
 {
-	int min_position = find_min_position(*b);
-	int max_position = find_max_position(*b);
+	int		up;
+	int		down;
+	int		i;
+	int		if_min;
+	t_pos	info;
 
-	int upper = min_position <= max_position ? min_position : max_position;
-	int down = upper == max_position ? min_position : max_position;
-
-	int i = 0;
-
-	if (upper < down)
+	info = get_position_info(*b);
+	up = info.min_position <= info.max_position ? info.min_position : info.max_position;
+	down = up == info.max_position ? info.min_position : info.max_position;
+	i = 0;
+	if (up < down)
+		while (i < up)
 		{
-			// if i choise up
-			while (i < upper)
-			{
-				rotate(&(*b));
-				i++;
-			}
+			rotate(&(*b));
+			i++;
 		}
 	else
+		while (i < down)
 		{
-			// if i choise down
-			while (i < down)
-			{
-				reverse_rotate(&(*b));
-				i++;
-			}
+			reverse_rotate(&(*b));
+			i++;
 		}
-	int if_min = 0;
-	if ((*b)->element == find_min_element(*b))
+	if_min = 0;
+	if ((*b)->element == info.min_element)
 		if_min = 1;
 	push(&(*b), &(*a));
-
 	if (if_min)
 		rotate(&(*a));
 }
 
-void	solve_6_20(t_stack *a)
+void	solve_6_20(t_stack **a)
 {
 	t_stack *b;
+	t_pos	info;
 
 	b = NULL;
-	move_2_b(&a, &b);
+	move_2_b(&(*a), &b);
 	while (b)
-		mover(&a, &b);
-
-	int min = find_min_element(a);
-	while (a->element != min)
-		rotate(&a);
-
-	ft_printf("print stack a\n");
-	print_stack(a);
+		mover(&(*a), &b);
+	info = get_position_info(*a);
+	while ((*a)->element != info.min_element)
+		rotate(&(*a));
 }
