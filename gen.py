@@ -4,8 +4,7 @@ import os
 col_test = 1
 
 for i in range(col_test):
-	# length = random.randint(1, 20)
-	length = 50
+	length = 100
 	seed = []
 	i = 0
 	while i < length:
@@ -17,3 +16,4 @@ for i in range(col_test):
 	for i in seed:
 		line += str(i) + ' '
 	os.system(f'./prog {line}')
+	print(f'./prog {line}')
