@@ -14,7 +14,7 @@ fclean:
 
 test:
 	@gcc *.c ./libs/*.c ./stack/*.c ./solve/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog
-	@./prog 4 1 8 2 3 9 6
+	@./prog 4 1 8 2 3
 
 grind:
 	@gcc -g *.c ./libs/*.c ./stack/*.c ./solve/*.c -L. ./ft_printf/libftprintf.a -I includes/header.h -o prog

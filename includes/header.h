@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 16:04:26 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 16:15:29 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void					switcher(t_stack *a);
 void					solve_2(t_stack **a);
 void					solve_3(t_stack **a);
 void					solve_4(t_stack **a);
+void					solve_5(t_stack **a);
 void					solve_6_20(t_stack **a);
 void					solve_21_101(t_stack **a);
 
