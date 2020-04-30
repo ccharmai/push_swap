@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 16:30:30 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 19:36:22 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void					append_head(t_stack **stack, int element);
 int						stack_len(t_stack *stack);
 int						have_two(t_stack *stack);
 t_pos					get_position_info(t_stack *stack);
+void					ft_qsort(int len, int *mass);
 
 /* solve */
 void					move_one_smaller(t_stack **a, t_stack **b);
