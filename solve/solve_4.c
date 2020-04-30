@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 20:40:58 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 16:01:32 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 16:31:20 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	solve_4(t_stack **a)
 {
-	return ;
+	t_stack	*b;
+
+	b = NULL;
+	move_one_smaller(&(*a), &b);
+	solve_3(&(*a));
+	push(&b, &(*a));
 }

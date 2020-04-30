@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 16:15:29 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 16:30:30 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int						have_two(t_stack *stack);
 t_pos					get_position_info(t_stack *stack);
 
 /* solve */
+void					move_one_smaller(t_stack **a, t_stack **b);
 void					move_2_b(t_stack **a, t_stack **b);
 void					switcher(t_stack *a);
 void					solve_2(t_stack **a);
