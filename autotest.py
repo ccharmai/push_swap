@@ -32,7 +32,7 @@ for i in range(col_test):
 	time_start = time.time()
 	os.system(f'./prog {line} >> autotest')
 	time_end = time.time()
-	
+
 	time_all += (time_end-time_start)
 
 f = open('autotest', 'r')
@@ -43,6 +43,7 @@ for line in f:
 			print('error in test')
 			print(line)
 			error += 1
+			
 if error == 0:
 	print(f'Все {col_test} тестов пройдены за {round(time_all, 5)} секунд')
 	print(f'В среднем по {round((time_all / col_test), 5)} секунды на тест')

@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 19:28:17 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 19:39:09 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 20:24:30 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 void	ft_qsort(int len, int *mass)
 {
-	int i = 0;
-	int j = len - 1;
+	int i;
+	int j;
 	int tmp;
+	int mid;
 
-	int mid = mass[len / 2];
+	i = 0;
+	j = len - 1;
+	mid = mass[len / 2];
 	while (i <= j)
 	{
 		while (mass[i] < mid)
@@ -30,7 +33,6 @@ void	ft_qsort(int len, int *mass)
 			tmp = mass[i];
 			mass[i] = mass[j];
 			mass[j] = tmp;
-
 			i++;
 			j--;
 		}

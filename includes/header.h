@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 19:36:22 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 20:09:38 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ void					ft_qsort(int len, int *mass);
 
 /* solve */
 void					move_one_smaller(t_stack **a, t_stack **b);
+int						*find_3_points(t_stack *a);
 void					move_2_b(t_stack **a, t_stack **b);
 void					switcher(t_stack *a);
 void					solve_2(t_stack **a);
