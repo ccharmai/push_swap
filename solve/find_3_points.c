@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 19:46:56 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 20:18:49 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/04/30 20:32:03 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ int	*find_3_points(t_stack *a)
 	points[0] = mass[step];
 	points[1] = mass[step * 2];
 	points[2] = mass[step * 3];
+	free(mass);
 	return (points);
 }
