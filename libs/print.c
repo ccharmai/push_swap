@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:28:58 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 16:35:54 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/01 14:07:17 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int		get_width(int nb)
 	int	w;
 
 	w = 0;
+	if (nb < 0)
+	{
+		nb *= -1;
+		w = 1;
+	}
 	while (nb > 0)
 	{
 		w++;
@@ -68,17 +73,17 @@ void	print_both_stack(t_stack *a, t_stack *b)
 		}
 		if (b)
 		{
-			ft_printf(" %i", b->element);
+			ft_printf(" | %i", b->element);
 			b = b->next;
 		}
 		ft_printf("\n");
 	}
 	ft_printf("_");
 	print_n_spaces(width_max);
-	ft_printf("_\n");
+	ft_printf("  _\n");
 	ft_printf("a");
 	print_n_spaces(width_max);
-	ft_printf("b\n");
+	ft_printf("| b\n");
 }
 
 void	print_answer(t_stack *a)
