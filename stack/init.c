@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:49:54 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:50:23 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 17:51:34 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ t_stack	*init_stack_with_char_mass(int len, char **av)
 		tab[i - 1] = ft_atoi(av[i]);
 		i++;
 	}
-	if (check_unique_int_mass(len - 1, tab)
+	if (check_unique_int_mass(len - 1, tab))
 		raise_not_unique_error();
 	return (init_stack_with_mass(len - 1, tab));
 }
