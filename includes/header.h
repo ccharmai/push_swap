@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:46:33 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 17:50:29 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct			s_pos
 /*	libs functions here
 */
 void					raise_not_integer_error();
+void					raise_not_unique_error(void);
 int						is_integer(char *line);
 void					print_both_stack(t_stack *a, t_stack *b);
 int						get_largest_width(t_stack *stack);
