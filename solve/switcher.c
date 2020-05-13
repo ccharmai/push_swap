@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 21:07:10 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:36:07 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 18:01:34 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	switcher(t_stack *a)
 	int len;
 
 	len = stack_len(a);
-	if (len == 2)
+	if (len == 1)
+		pass();
+	else if (len == 2)
 		solve_2(&a);
 	else if (len == 3)
 		solve_3(&a);

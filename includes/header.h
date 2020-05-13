@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:50:29 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 18:01:25 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void					print_init(t_stack *a);
 int						is_sorted(t_stack *stack);
 void					print_answer(t_stack *a);
 int						check_unique_int_mass(int len, int *mass);
+void					pass(void);
 
 /* push swap functions here */
 void					swap(t_stack *stack);
