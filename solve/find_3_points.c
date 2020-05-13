@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 19:46:56 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:04:36 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 17:28:27 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,9 @@ int	*find_index(t_stack *a)
 	in_mass[i] = '\0';
 	ft_qsort(len, in_mass);
 	i = 0;
+
+	// это проверка на неукальность занчений
+	// надо сделать это на этапе ввода
 	while (in_mass[i])
 	{
 		if (in_mass[i] == (in_mass[i + 1]))
@@ -66,6 +69,8 @@ int	*find_index(t_stack *a)
 		}
 		i++;
 	}
+
+
 	tmp = (int*)malloc(sizeof(int) * (len + 1));
 	i = 0;
 	n = 0;

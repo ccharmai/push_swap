@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 21:07:10 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 16:50:14 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 17:36:07 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void	switcher(t_stack *a)
 	// 	solve_21_101(&a);
 	else
 		solve101plus(&a);
-	// print_stack(a);
+	print_stack(a);
 	free_stack(a);
 }

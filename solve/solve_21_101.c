@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/13 16:59:07 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:00:34 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 17:27:35 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ void	solve_6_20adop(t_stack **a, int *point, int len)
 	info = get_position_info(*a);
 	while ((*a)->element != info.min_element)
 		rotate(&(*a));
-	print_both_stack(*a, b);
 }
 
 t_stack	*less_than_2_b(int *point, t_stack **a)
