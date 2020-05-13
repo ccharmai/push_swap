@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 20:09:38 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 16:35:35 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 typedef struct			s_stack
 {
+	int					index;
 	int					element;
 	struct s_stack		*next;
 }						t_stack;
@@ -73,5 +74,20 @@ void					solve_4(t_stack **a);
 void					solve_5(t_stack **a);
 void					solve_6_20(t_stack **a);
 void					solve_21_101(t_stack **a);
+int						*find_index(t_stack *a);
+void					push_back(t_stack **a, t_stack **b);
+void					check_seq(t_stack **a, t_stack *b, int len);
+void					mover(t_stack **a, t_stack **b);
+void 					solve101plus(t_stack **a);
+t_stack					*less_than_2_b(int *point, t_stack **a);
+void					mover100(t_stack **a, t_stack **b, int len, int n);
+t_pos					get_position(t_stack *stack, int len);
+void					solve102(t_stack **a, int *point, int len);
+void					solve103(t_stack **a, int *point, int len);
+t_pos					get_position2(t_stack *stack, int len, int n);
+t_pos					get_position3(t_stack *stack, t_stack *stack2, int len, int n);
+void					fixit(t_stack **a, int len, int n);
+void					solve104(t_stack **a, int *point, int len);
+void					fixit1(t_stack **a, int len);
 
 #endif

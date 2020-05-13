@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 21:18:30 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 16:00:27 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 17:01:40 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	mover(t_stack **a, t_stack **b)
 	t_pos	info;
 
 	info = get_position_info(*b);
-	up = info.min_position <= info.max_position ? info.min_position : info.max_position;
+	up = info.min_position <= info.max_position ? \
+	info.min_position : info.max_position;
 	down = up == info.max_position ? info.min_position : info.max_position;
 	i = 0;
 	if (up < down)

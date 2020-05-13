@@ -6,21 +6,35 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 19:28:17 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 20:24:30 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/13 16:45:37 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/header.h"
 
-void	ft_qsort(int len, int *mass)
+static void	init_i_j(int *i, int *j, int len)
+{
+	*i = 0;
+	*j = len - 1;
+}
+
+static void	swap_mass(int *a, int *b)
+{
+	int	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+void		ft_qsort(int len, int *mass)
 {
 	int i;
 	int j;
 	int tmp;
 	int mid;
 
-	i = 0;
-	j = len - 1;
+	init_i_j(&i, &j, len);
 	mid = mass[len / 2];
 	while (i <= j)
 	{
@@ -30,9 +44,7 @@ void	ft_qsort(int len, int *mass)
 			j--;
 		if (i <= j)
 		{
-			tmp = mass[i];
-			mass[i] = mass[j];
-			mass[j] = tmp;
+			swap_mass(&mass[i], &mass[j]);
 			i++;
 			j--;
 		}

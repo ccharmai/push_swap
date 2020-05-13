@@ -4,7 +4,7 @@ import os
 col_test = 1
 
 for i in range(col_test):
-	length = 100
+	length = 1000
 	seed = []
 	i = 0
 	while i < length:
@@ -17,3 +17,4 @@ for i in range(col_test):
 		line += str(i) + ' '
 	os.system(f'./prog {line}')
 	print(f'./prog {line}')
+	

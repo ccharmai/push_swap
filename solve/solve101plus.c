@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solve_21_101.c                                     :+:      :+:    :+:   */
+/*   solve101plus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/13 16:59:07 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:00:34 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/05/13 17:16:22 by ccharmai          #+#    #+#             */
+/*   Updated: 2020/05/13 17:18:55 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/header.h"
 
-t_pos	get_position(t_stack *stack, int len)
+void	push_back3(t_stack **a, t_stack **b)
 {
-	int		i;
-	t_pos	info;
-
-	info.min_position = 0;
-	info.min_element = stack->element;
-	i = 0;
-	while (stack)
-	{
-		if (stack->element < info.min_element)
-		{
-			info.min_element = stack->element;
-			info.min_position = i;
-		}
-		i++;
-		stack = stack->next;
-	}
-	return (info);
+	push(&(*a), &(*b));
 }
 
-void	mover100(t_stack **a, t_stack **b, int len, int n)
+void	ch_seq(t_stack **a, t_stack *b, int len)
+{
+	int		i;
+	int		n;
+	t_stack	*tmp;
+
+	tmp = *a;
+	i = 0;
+	n = len / 4;
+	while (i < n)
+	{
+		if (tmp->next->element - tmp->element >= 0)
+			tmp = tmp->next;
+		else
+			break ;
+		i++;
+	}
+	while (i < len)
+	{
+		reverse_rotate(a);
+		i++;
+	}
+	i = 1;
+	n = len / 4;
+}
+
+void	mover101(t_stack **a, t_stack **b, int len, int n)
 {
 	int		up;
 	int		down;
@@ -59,13 +69,14 @@ void	mover100(t_stack **a, t_stack **b, int len, int n)
 	push(&(*a), &(*b));
 }
 
-void	solve_6_20adop(t_stack **a, int *point, int len)
+void	solve101adop(t_stack **a, int *point, int len)
 {
 	t_pos	info;
 	t_stack	*tmpa;
-	t_stack *b;
 	int		i;
 	int		n;
+	int		z;
+	t_stack	*b;
 
 	b = NULL;
 	i = 0;
@@ -78,46 +89,34 @@ void	solve_6_20adop(t_stack **a, int *point, int len)
 	}
 	i = 0;
 	n = len;
-	while (i < (len / 2))
+	z = len / 4 + 1;
+	while (i < z)
 	{
 		mover100(&(*a), &b, len, n);
 		i++;
 		n--;
 	}
 	i = 0;
-	while (i < (len / 2))
+	while (i < z)
 	{
 		push_back(&(*a), &b);
 		i++;
 	}
-	check_seq(&(*a), b, len);
-	info = get_position_info(*a);
-	while ((*a)->element != info.min_element)
-		rotate(&(*a));
-	print_both_stack(*a, b);
+	ch_seq(&(*a), b, len);
 }
 
-t_stack	*less_than_2_b(int *point, t_stack **a)
-{
-	int	len;
-	int count;
-	int	i;
-
-	i = 0;
-	count = 0;
-	len = stack_len(*a);
-	solve_6_20adop(&(*a), point, len);
-	return (*a);
-}
-
-void	solve_21_101(t_stack **a)
+void	solve101plus(t_stack **a)
 {
 	int		*points;
+	int		len;
 	int		i;
-	t_stack *half_sort;
+	t_stack	*half_sort;
 
 	i = 0;
 	points = find_index(*a);
-	half_sort = less_than_2_b(points, &(*a));
+	len = stack_len(*a);
+	solve101adop(&(*a), points, len);
+	solve102(&(*a), points, len);
+	solve103(&(*a), points, len);
 	free(points);
 }
