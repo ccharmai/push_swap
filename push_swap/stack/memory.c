@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:49:03 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 16:38:50 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/18 13:09:29 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	free_stack(t_stack *stack)
 {
 	t_stack	*prev;
-	t_stack	*p;
 
 	prev = NULL;
 	while (stack->next)
@@ -45,4 +44,22 @@ int		have_two(t_stack *stack)
 	if (stack && stack->next)
 		return (1);
 	return (0);
+}
+
+int		*stack_2_mass(int len, t_stack *a)
+{
+	int i;
+	int	*mass;
+
+	mass = (int*)malloc(sizeof(int) * len);
+	if (!mass)
+		raise_memory_error();
+	i = 0;
+	while (i < len)
+	{
+		mass[i] = a->element;
+		i++;
+		a = a->next;
+	}
+	return (mass);
 }

@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   pass.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/16 11:28:39 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/16 11:29:14 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/16 14:19:14 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/header.h"
 
 void	pass(void)
-{}
+{
+	int	i;
+
+	i = 0;
+}

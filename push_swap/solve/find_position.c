@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 20:41:10 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 15:47:30 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/17 21:36:47 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ t_pos	get_position_info(t_stack *stack)
 		i++;
 		stack = stack->next;
 	}
+	info.len = i;
 	return (info);
 }

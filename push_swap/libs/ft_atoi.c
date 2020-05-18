@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_init.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 19:45:49 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:55:36 by ccharmai         ###   ########.fr       */
+/*   Created: 2019/08/05 15:14:56 by ccharmai          #+#    #+#             */
+/*   Updated: 2020/05/18 12:51:10 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/header.h"
 
-void	print_init(t_stack *a)
+int		ft_atoi(const char *str)
 {
-	int		w;
-	t_stack	*p;
+	int		number;
+	int		sign;
 
-	p = a;
-	ft_printf("Init a and b:\n");
-	while (p)
+	number = 0;
+	sign = 1;
+	if (*str != '\0')
 	{
-		ft_printf("%i\n", p->element);
-		p = p->next;
+		while ((*str >= '\t' && *str <= '\r') || *str == ' ')
+			str++;
+		if (*str == '+' || *str == '-')
+		{
+			sign = (*str == '-') ? -1 : 1;
+			str++;
+		}
+		while (*str >= '0' && *str <= '9')
+		{
+			number = number * 10 + sign * (*str - '0');
+			str++;
+		}
 	}
-	w = get_largest_width(a);
-	ft_printf("_");
-	print_n_spaces(w);
-	ft_printf("_\n");
-	ft_printf("a");
-	print_n_spaces(w);
-	ft_printf("b\n");
+	return (number);
 }

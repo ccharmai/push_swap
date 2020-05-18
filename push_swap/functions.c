@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   functions.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 18:22:46 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/16 11:33:13 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/18 12:40:55 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/header.h"
 
-void	swap(t_stack *stack, int flag)
+void	swap(t_stack *stack, char act)
 {
 	int	tmp;
 
@@ -21,41 +21,37 @@ void	swap(t_stack *stack, int flag)
 	tmp = stack->element;
 	stack->element = (stack->next)->element;
 	(stack->next)->element = tmp;
-	if (flag == 1)
-		ft_printf("sa\n");
-	else if (flag == 2)
-		ft_printf("sb\n");
+	write(1, "s", 1);
+	write(1, &act, 1);
+	write(1, "\n", 1);
 }
 
-void	push(t_stack **rem_head, t_stack **get_head, int flag)
+void	push(t_stack **rem_head, t_stack **get_head, char act)
 {
 	if (!get_head || !rem_head)
 		return ;
 	append_head(get_head, delete_element(rem_head, 0));
-	if (flag == 1)
-		ft_printf("pa\n");
-	else if (flag == 2)
-		ft_printf("pb\n");
+	write(1, "p", 1);
+	write(1, &act, 1);
+	write(1, "\n", 1);
 }
 
-void	rotate(t_stack **stack, int flag)
+void	rotate(t_stack **stack, char act)
 {
 	if (!have_two(*stack))
 		return ;
 	append_element(delete_head(&(*stack)), *stack);
-	if (flag == 1)
-		ft_printf("ra\n");
-	else if (flag == 2)
-		ft_printf("rb\n");
+	write(1, "r", 1);
+	write(1, &act, 1);
+	write(1, "\n", 1);
 }
 
-void	reverse_rotate(t_stack **stack, int flag)
+void	reverse_rotate(t_stack **stack, char act)
 {
 	if (!have_two(*stack))
 		return ;
 	append_head(&(*stack), delete_last(*stack));
-	if (flag == 1)
-		ft_printf("rra\n");
-	else if (flag == 2)
-		ft_printf("rrb\n");
+	write(1, "rr", 2);
+	write(1, &act, 1);
+	write(1, "\n", 1);
 }

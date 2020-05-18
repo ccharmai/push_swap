@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:49:54 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:57:16 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/18 13:09:21 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ t_stack	*init_stack_with_char_mass(int len, char **av)
 
 	if (len < 2)
 	{
-		ft_printf("\n");
+		write(1, "\n", 1);
 		exit(0);
 	}
 	i = 1;
@@ -84,9 +84,6 @@ t_stack	*init_stack_with_char_mass(int len, char **av)
 void	print_stack(t_stack *stack)
 {
 	while (stack)
-	{
-		ft_printf("%i ", stack->element);
 		stack = stack->next;
-	}
-	ft_printf("\n");
+	write(1, "\n", 1);
 }

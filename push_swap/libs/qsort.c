@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 19:28:17 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 16:45:37 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/16 22:16:58 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void		ft_qsort(int len, int *mass)
 {
 	int i;
 	int j;
-	int tmp;
 	int mid;
 
 	init_i_j(&i, &j, len);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   solve_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 20:35:09 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/16 11:10:17 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/16 21:58:08 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	solve_2(t_stack **a)
 {
-	int flag;
-
-	flag = 1;
 	if (!is_sorted(*a))
-		swap(*a, flag);
+		swap(*a, 'a');
 }
