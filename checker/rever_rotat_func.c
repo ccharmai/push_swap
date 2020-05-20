@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/16 00:31:38 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/16 00:32:29 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/19 20:59:04 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	rra(t_folder **a)
 	t_folder *finish;
 	t_folder *tmp;
 
+	tmp = *a;
+	finish = *a;
+	start = *a;
 	if (*a)
 	{
-		tmp = *a;
-		finish = *a;
-		start = *a;
 		while (start->next != NULL)
 		{
 			start = start->next;
@@ -60,6 +60,7 @@ void	rrb(t_folder **b)
 			x->next = z;
 			y->next = NULL;
 		}
+		(*b) = x;
 	}
 }
 

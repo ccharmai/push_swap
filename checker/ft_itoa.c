@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 11:40:59 by aleksandrko       #+#    #+#             */
-/*   Updated: 2020/05/15 22:32:32 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/19 22:15:58 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char		*ft_itoas(long long int n)
 	if (n < 0)
 		sign = -1;
 	power = 1;
-	while (n / 10 / power != 0 && ++i)
+	while ((n / 10 / power) != 0 && ++i)
 		power = power * 10;
 	if (!(result = malloc(sizeof(char) * (unsigned long)(i + sign + 1))))
 		return (NULL);

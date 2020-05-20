@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 21:17:01 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/15 22:22:16 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/19 22:21:44 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		add_ch(char *s)
 	if (((s[0] == '+') && (ft_strcmp(&s[1], b))) ||\
 	((s[0] != '+') && ft_strcmp(s, a)))
 	{
+		printf("f\n");
 		free(a);
 		free(b);
 		return (1);
@@ -58,7 +59,7 @@ int		check_s(char **s)
 			if (s[i][j] >= 48 && s[i][j] <= 57)
 				j++;
 			else if ((s[i][j] == '-' || s[i][j] == '+') &&\
-	s[i][j + 1] != '\0' && s[i][j + 1] >= 48 && s[i][j] <= 57)
+	s[i][j + 1] != '\0' && s[i][j + 1] >= 48 && s[i][j + 1] <= 57)
 				j++;
 			else
 				return (1);
