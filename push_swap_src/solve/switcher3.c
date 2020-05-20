@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   switcher3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/19 16:44:00 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/20 11:37:27 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/20 20:43:46 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	switcher(t_stack *a)
 
 	len = stack_len(a);
 	if (len == 1 || is_sorted(a))
-		return ;
+		pass();
 	else if (len == 2)
 		solve_2(&a);
 	else if (len == 3)
