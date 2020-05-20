@@ -6,7 +6,7 @@
 #    By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/20 14:41:46 by ccharmai          #+#    #+#              #
-#    Updated: 2020/05/20 19:31:21 by ccharmai         ###   ########.fr        #
+#    Updated: 2020/05/20 20:23:23 by ccharmai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ RESET = "\033[0;0m"
 CYAN = "\033[1;35m"
 
 CC = gcc
-FLAGS = -Wall -Werror -Wextra -MD
+FLAGS = -Wall -Werror -Wextra
 
 CHECKER_DIR = ./checker_src/
 CHECKER_HEADER = $(CHECKER_DIR)includes/

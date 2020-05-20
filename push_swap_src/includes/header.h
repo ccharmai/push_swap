@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:11:27 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/20 19:23:06 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/20 20:00:05 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,6 @@ void					mysolve(t_stack **a, int col_blocks);
 void					move_one_smaller(t_stack **a, t_stack **b);
 void					switcher(t_stack *a);
 int						ft_atoi(const char *str);
+int						is_int(char *str);
 
 #endif

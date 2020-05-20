@@ -6,7 +6,7 @@
 /*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:20:37 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/18 12:52:56 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/20 20:09:29 by ccharmai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	raise_not_integer_error(void)
 {
-	write(1, "Error\n", 6);
+	write(1, "Error: not integer\n", 19);
 	exit(1);
 }
 
